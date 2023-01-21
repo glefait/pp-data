@@ -37,6 +37,6 @@ jobs:
                      --output-new-documents-file data/new-documents.csv \
                      --update-existing-file
       - uses: stefanzweifel/git-auto-commit-action@v4
-        repository: data
         with:
+          repository: data
           commit_message: auto found documents
