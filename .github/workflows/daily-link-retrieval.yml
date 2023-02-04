@@ -1,4 +1,4 @@
-name: Daily document lookup
+name: Daily link lookup
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
     - cron: "00 11 * * *"
 
 jobs:
-  search_for_documents:
+  search_for_links:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository
