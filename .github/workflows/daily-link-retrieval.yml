@@ -1,0 +1,42 @@
+name: Daily document lookup
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "00 11 * * *"
+
+jobs:
+  search_for_documents:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+          path: data
+      - name: Checkout the tools
+        uses: actions/checkout@v3
+        with:
+          repository: glefait/politiques-publiques
+          ssh-key: ${{ secrets.PRIVATE_SSH_KEY_PP }}
+          path: tool
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install playwright
+          # install just chrome
+          python -m playwright install chromium --with-deps
+          cd tool && pip install -r requirements.txt
+      - name: Find new documents
+        run: |
+          pp_get_links --source ALL --existing-data-file data/links-martinique.csv \
+                       --output-new-documents-file data/new-links.csv \
+                       --update-existing-file
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          repository: data
+          commit_message: auto found documents
