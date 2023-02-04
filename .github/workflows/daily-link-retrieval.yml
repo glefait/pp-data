@@ -34,7 +34,7 @@ jobs:
       - name: Find new documents
         run: |
           pp_get_links --source ALL --existing-data-file data/links-martinique.csv \
-                       --output-new-documents-file data/new-links.csv \
+                       --output-new-data-file data/new-links.csv \
                        --update-existing-file
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
