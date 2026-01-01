@@ -1,2 +1,5 @@
 url,date_publication,source,type
-https://opendata.justice-administrative.fr/DTA/TA_202503.zip,2025-03-01,TA,monthly-zipped-xml
+https://opendata.justice-administrative.fr/DTA/TA_202308.zip,2023-08-01,TA,monthly-zipped-xml
+https://opendata.justice-administrative.fr/DTA/TA_202401.zip,2024-01-01,TA,monthly-zipped-xml
+https://opendata.justice-administrative.fr/DTA/TA_202406.zip,2024-06-01,TA,monthly-zipped-xml
+https://opendata.justice-administrative.fr/DTA/TA_202501.zip,2025-01-01,TA,monthly-zipped-xml
