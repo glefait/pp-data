@@ -1,1 +1,8 @@
 url,date_publication,source,type
+https://opendata.justice-administrative.fr/DTA/TA_202408.zip,2024-08-01,TA,monthly-zipped-xml
+https://opendata.justice-administrative.fr/DTA/TA_202508.zip,2025-08-01,TA,monthly-zipped-xml
+https://opendata.justice-administrative.fr/DTA/TA_202511.zip,2025-11-01,TA,monthly-zipped-xml
+https://opendata.justice-administrative.fr/DTA/TA_202601.zip,2026-01-01,TA,monthly-zipped-xml
+https://opendata.justice-administrative.fr/DTA/TA_202602.zip,2026-02-01,TA,monthly-zipped-xml
+https://opendata.justice-administrative.fr/DTA/TA_202603.zip,2026-03-01,TA,monthly-zipped-xml
+https://opendata.justice-administrative.fr/DTA/TA_202604.zip,2026-04-01,TA,monthly-zipped-xml
